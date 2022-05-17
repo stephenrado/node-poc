@@ -1,0 +1,40 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <main>
+         <%- include('../includes/navigation.ejs') %>
+         <canvas id="myChart"></canvas>
+        <div>
+            <h1>Chart here</h1>
+        </div>
+    </main>
+    <%- include('../includes/end.ejs') %>
+    <script>
+        var canvas = document.getElementById('myChart');
+        var data = {
+        labels: <%- JSON.stringify(chartLabels); %>,
+        datasets: [
+            {
+            label: "Active Tasks",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: <%- JSON.stringify(chartData); %>,
+            }
+        ]
+        };
+    
+        var config = {
+                type: "bar",
+                data: data,
+                options: {}
+            }
+    
+        const myChart = new Chart(
+            document.getElementById('myChart'), config
+        );
+    </script>

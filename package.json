@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-complete-guide",
+  "version": "1.0.0",
+  "description": "Complete Node.js Guide",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --ignore '*.json' app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Maximilian Schwarzmüller",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chart.js": "^3.7.1",
+    "chartjs-node-canvas": "^4.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^6.0.5",
+    "google-charts-node": "^1.0.4",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^2.6.7",
+    "pug": "^3.0.2"
+  }
+}
